@@ -1,0 +1,113 @@
+package com.ccc.gulimall.product.app;
+
+import java.util.Arrays;
+import java.util.List;
+import java.util.Map;
+
+import com.ccc.common.group.AddGroup;
+import com.ccc.common.group.UpdateGroup;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.validation.annotation.Validated;
+import org.springframework.web.bind.annotation.*;
+
+import com.ccc.gulimall.product.entity.BrandEntity;
+import com.ccc.gulimall.product.service.BrandService;
+import com.ccc.common.utils.PageUtils;
+import com.ccc.common.utils.R;
+
+
+/**
+ * Ʒ?
+ *
+ * @author ccc
+ * @email ccc@gmail.com
+ * @date 2022-06-08 15:50:32
+ */
+@Validated
+@RestController
+@RequestMapping("product/brand")
+public class BrandController {
+    @Autowired
+    private BrandService brandService;
+
+    /**
+     * 列表
+     */
+    @RequestMapping("/list")
+    //@RequiresPermissions("product:brand:list")
+    public R list(@RequestParam Map<String, Object> params){
+        PageUtils page = brandService.queryPage(params);
+
+        return R.ok().put("page", page);
+    }
+
+    @GetMapping("/infos")
+    public R BrandInfo(@RequestParam("BrandId") List<Long> brandId){
+       List<BrandEntity> brand = brandService.getBrandByIds(brandId);
+       return R.ok().put("brand",brand);
+    }
+
+
+    /**
+     * 信息
+     */
+    @RequestMapping("/info/{brandId}")
+  //  @RequiresPermissions("product:brand:info")
+    public R info(@PathVariable("brandId") Long brandId){
+		BrandEntity brand = brandService.getById(brandId);
+
+        return R.ok().put("brand", brand);
+    }
+
+    /**
+     * 保存
+     */
+    @RequestMapping("/save")
+    //@RequiresPermissions("product:brand:save")
+    //@Valid注解表示需要开启数据校验
+    public R save(@Validated({AddGroup.class}) @RequestBody BrandEntity brand  /*,BindingResult result*/){
+       /* //判断校验是否出错
+
+        if (result.hasErrors()){
+            Map<String , String> map = new HashMap<>();
+            //1.获取校验的错误结果
+            for (FieldError item : result.getFieldErrors()) {
+                //获取到错误提示
+                 String message = item.getDefaultMessage();
+                 //获取错误的属性名称
+                 String field = item.getField();
+                 map.put(field,message);
+            }
+
+            return R.error(400,"提交的数据有误" ).put("data",map);
+        }else {
+            brandService.save(brand);
+
+        }*/
+        brandService.save(brand);
+        return R.ok();
+    }
+
+    /**
+     * 修改
+     */
+    @RequestMapping("/update")
+    //@RequiresPermissions("product:brand:update")
+    public R update(@Validated({UpdateGroup.class}) @RequestBody BrandEntity brand){
+		brandService.updateDetail(brand);
+
+        return R.ok();
+    }
+
+    /**
+     * 删除
+     */
+    @RequestMapping("/delete")
+    //@RequiresPermissions("product:brand:delete")
+    public R delete(@RequestBody Long[] brandIds){
+		brandService.removeByIds(Arrays.asList(brandIds));
+
+        return R.ok();
+    }
+
+}

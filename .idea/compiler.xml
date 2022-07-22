@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="gulimain-order" />
+        <module name="gulimall-third-party" />
+        <module name="gulimain-common" />
+        <module name="gulimain-coupon" />
+        <module name="gulimain-member" />
+        <module name="renren-fast" />
+        <module name="gulimain-ware" />
+        <module name="gulimall-search" />
+        <module name="gulimain-product" />
+        <module name="gulimall-gateway" />
+        <module name="renren-generator" />
+      </profile>
+    </annotationProcessing>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="gulimain-common" options="-parameters" />
+      <module name="gulimain-coupon" options="-parameters" />
+      <module name="gulimain-member" options="-parameters" />
+      <module name="gulimain-order" options="-parameters" />
+      <module name="gulimain-product" options="-parameters" />
+      <module name="gulimain-ware" options="-parameters" />
+      <module name="gulimall-gateway" options="-parameters" />
+      <module name="gulimall-search" options="-parameters" />
+      <module name="gulimall-third-party" options="-parameters" />
+      <module name="renren-fast" options="-parameters" />
+      <module name="renren-generator" options="-parameters" />
+    </option>
+  </component>
+</project>
