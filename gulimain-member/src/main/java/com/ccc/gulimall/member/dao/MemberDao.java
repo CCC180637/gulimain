@@ -2,6 +2,7 @@ package com.ccc.gulimall.member.dao;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.ccc.gulimall.member.entity.MemberEntity;
+import com.ccc.gulimall.member.entity.MemberLevelEntity;
 import org.apache.ibatis.annotations.Mapper;
 
 /**
@@ -13,5 +14,6 @@ import org.apache.ibatis.annotations.Mapper;
  */
 @Mapper
 public interface MemberDao extends BaseMapper<MemberEntity> {
-	
+
+
 }

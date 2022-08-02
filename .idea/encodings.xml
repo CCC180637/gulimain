@@ -8,6 +8,8 @@
     <file url="file://$PROJECT_DIR$/gulimain-order/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/gulimain-product/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/gulimain-ware/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/gulimall-auth-server/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/gulimall-cart/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/gulimall-gateway/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/gulimall-search/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/gulimall-third-party/src/main/java" charset="UTF-8" />

@@ -7,17 +7,19 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="gulimall-cart" />
+        <module name="gulimain-coupon" />
+        <module name="gulimain-member" />
+        <module name="gulimall-auth-server" />
+        <module name="gulimain-ware" />
+        <module name="gulimall-gateway" />
+        <module name="renren-generator" />
         <module name="gulimain-order" />
         <module name="gulimall-third-party" />
         <module name="gulimain-common" />
-        <module name="gulimain-coupon" />
-        <module name="gulimain-member" />
         <module name="renren-fast" />
-        <module name="gulimain-ware" />
         <module name="gulimall-search" />
         <module name="gulimain-product" />
-        <module name="gulimall-gateway" />
-        <module name="renren-generator" />
       </profile>
     </annotationProcessing>
   </component>
@@ -29,6 +31,8 @@
       <module name="gulimain-order" options="-parameters" />
       <module name="gulimain-product" options="-parameters" />
       <module name="gulimain-ware" options="-parameters" />
+      <module name="gulimall-auth-server" options="-parameters" />
+      <module name="gulimall-cart" options="-parameters" />
       <module name="gulimall-gateway" options="-parameters" />
       <module name="gulimall-search" options="-parameters" />
       <module name="gulimall-third-party" options="-parameters" />

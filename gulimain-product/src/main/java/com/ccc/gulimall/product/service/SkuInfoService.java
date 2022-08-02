@@ -9,6 +9,7 @@ import com.ccc.gulimall.product.vo.SpuSaveVo;
 
 import java.util.List;
 import java.util.Map;
+import java.util.concurrent.ExecutionException;
 
 /**
  * sku??Ϣ
@@ -30,6 +31,6 @@ public interface SkuInfoService extends IService<SkuInfoEntity> {
 
     List<SkuInfoEntity> getSkuBySpuId(Long spuId);
 
-    SkuItemVo item(Long skuId);
+    SkuItemVo item(Long skuId) throws ExecutionException, InterruptedException;
 }
 

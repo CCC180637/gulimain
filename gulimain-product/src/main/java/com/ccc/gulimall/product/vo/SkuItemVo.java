@@ -20,6 +20,8 @@ public class SkuItemVo {
     //3、获取spu的销售属性组合
     List<SkuItemSaleAttrVo> saleAttr;
 
+    Boolean hasStock  = true;
+
     //4、获取spu的介绍
     SpuInfoDescEntity desp;
 

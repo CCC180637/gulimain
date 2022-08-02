@@ -105,6 +105,6 @@ public class MemberEntity implements Serializable {
 	/**
 	 * 访问令牌剩余的时间
 	 */
-	private String expiresIn;
+	private Long expiresIn;
 
 }

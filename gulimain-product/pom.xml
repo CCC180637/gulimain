@@ -8,7 +8,7 @@
         <version>2.1.8.RELEASE</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>com.ccc</groupId>
+    <groupId>com.ccc</groupId>x
     <artifactId>gulimain-product</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>gulimain-product</name>
@@ -27,6 +27,11 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-configuration-processor</artifactId>
+            <optional>true</optional>
         </dependency>
 
         <!--模板引擎thymeleaf-->
@@ -58,6 +63,15 @@
             <artifactId>spring-cloud-starter-alicloud-oss</artifactId>
             <version>1.5.0.RELEASE</version>
         </dependency>
+
+
+
+        <!--完成springSession的整合-->
+        <dependency>
+            <groupId>org.springframework.session</groupId>
+            <artifactId>spring-session-data-redis</artifactId>
+        </dependency>
+
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
